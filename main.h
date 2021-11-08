@@ -22,5 +22,7 @@ void print_char(va_list print);
 void print_string(va_list print);
 void print_percent(va_list print);
 void print_integer(va_list print);
+void print_binary(unsigned int i);
+void convert_binary(va_list print);
 
 #endif

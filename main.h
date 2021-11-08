@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdarg.h>
 
 
 int _putchar(char c);
@@ -20,5 +21,6 @@ typedef struct list_format
 void print_char(va_list print);
 void print_string(va_list print);
 void print_percent(va_list print);
+void print_integer(va_list print);
 
 #endif

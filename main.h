@@ -1,7 +1,7 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE main.h
-#include <stddef.h>
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdarg.h>
+
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -21,5 +21,6 @@ typedef struct list_format
 void print_char(va_list print);
 void print_string(va_list print);
 void print_percent(va_list print);
+void print_integer(va_list print);
 
 #endif

@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
+		{"u", print_unsigned},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0;

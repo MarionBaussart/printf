@@ -37,5 +37,4 @@ void print_address(va_list print);
 void print_hexas(long unsigned int i);
 void convert_hexas(va_list print);
 
-
 #endif

@@ -27,5 +27,9 @@ void print_integer(va_list print);
 void print_unsigned(va_list print);
 void print_binary(unsigned int i);
 void convert_binary(va_list print);
+void print_hexa(unsigned int i);
+void convert_hexa(va_list print);
+void print_HEXA(unsigned int i);
+void convert_HEXA(va_list print);
 
 #endif

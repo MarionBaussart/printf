@@ -33,6 +33,7 @@ int _printf(const char *format, ...)
 		{"d", print_integer},
 		{"i", print_integer},
 		{"u", print_unsigned},
+		{"b", convert_binary},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0;

@@ -34,14 +34,23 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"u", print_unsigned},
 		{"b", convert_binary},
+		{"x", convert_hexa},
+		{"X", convert_HEXA},
 		{"o", convert_octal},
 		{"p", print_address},
 		{NULL, NULL}
 	};
-	int i = 0, j = 0;
+	int i = 0, j = 0, k = 0, length = _strlen(format);
 /* pointer of the list named print */
 	va_list print;
 
+/* length : if %%, count only one */
+	while (format && format[k])
+	{
+		if (format[k] == '%' && format[k + 1] == '%')
+			length--, k++;
+		k++;
+	}
 /* parcourir the list which the last argument is format */
 	va_start(print, format);
 /* write the string but if it is '%' print argument*/
@@ -66,9 +75,8 @@ int _printf(const char *format, ...)
 		}
 	/* print the string */
 	_putchar(format[i]);
-	j = 0;
-	i++;
+	j = 0, i++;
 	}
 /* return the lenght of the string */
-	return (_strlen(format));
+	return (length);
 }

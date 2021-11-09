@@ -35,6 +35,7 @@ void convert_HEXA(va_list print);
 =======
 void convert_octal(va_list print);
 void print_octal(unsigned int i);
+void print_address(va_list print);
 
 
 >>>>>>> f06bb4b27e17694fbbd3709dd1aaeb2868cf99d0

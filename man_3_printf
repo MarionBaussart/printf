@@ -50,11 +50,11 @@ flags:
 	- : left-justify within the given field width.
 
 .SH DESCRIPTION
-_printf is a function 
+_printf is a function
 .SH OPTIONS
 The nuseradd does not take any options. However, you can supply username.
 .SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8) 
+useradd(8), passwd(5), nuseradd.debian(8)
 .SH BUGS
 No known bugs.
 .SH AUTHOR

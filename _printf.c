@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 		{"x", convert_hexa},
 		{"X", convert_HEXA},
 		{"o", convert_octal},
+		{"p", print_address},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0, k = 0, length = _strlen(format);

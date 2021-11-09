@@ -4,19 +4,50 @@
 .SH NAME
 _printf , print every thing as you want.
 .SH SYNOPSIS
+
 to use it: _printf(<function>).
+
 Specifier:
+
 	%c : Print a character.
+
 	%s : Print string of character.
+
 	%% : Print %.
+
 	%d or %i : Print decimal integer.
+
 	%b : Convert unsigned integer to binary.
+
 	%u : Print unsigned decimal integer.
+
 	%o : Print unsigned octal.
+
 	%x : Print unsigned hexadecimal integer.
+
 	%X : Print unsigned hexadecimal integer in uppercase.
+
 	%p : Print pointer adress.
 
+	%l : Long int.
+
+	%h : Short int.
+
+	%r : Print the reversed string.
+
+	%R : Print the rot13's string.
+
+flags:
+
+	+ : Preceed the result with a plus or minus (+ or -).
+
+	(space) : If no sign is going to be written, a blank space is inserted before the value.
+
+	# : Used with "o", "x" or "X" specifiers the value is preceeded with 0, 0x or 0X respectively for value differents than zero.
+
+	0 : Left-pads the numbers with zeros (0) instead of spaces.
+
+	- : left-justify within the given field width.
 
 .SH DESCRIPTION
 _printf is a function 

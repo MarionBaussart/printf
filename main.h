@@ -6,6 +6,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_number(int n);
+void print_unsigned_number(unsigned int n);
 
 /**
  * struct list_format - Struct list_format

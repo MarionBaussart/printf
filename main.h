@@ -34,7 +34,7 @@ void convert_HEXA(va_list print);
 void convert_octal(va_list print);
 void print_octal(unsigned int i);
 void print_address(va_list print);
-void print_hexas(long unsigned int i);
+void print_hexas(unsigned int i);
 void convert_hexas(va_list print);
 
 #endif

@@ -7,7 +7,7 @@
  * Return: No return.
  */
 
-void print_hexas(long unsigned int i)
+void print_hexas(unsigned int i)
 {
 	if (i / 16 != 0)
 	{
@@ -27,12 +27,15 @@ void print_hexas(long unsigned int i)
 	}
 }
 
-
+/**
+ * print_address - print the address of a pointer
+ * @print: thing to print
+ */
 
 void print_address(va_list print)
 {
-	long unsigned int arg = va_arg(print, int);
-	long unsigned int *p = &arg;
+	unsigned int arg = va_arg(print, int);
+	unsigned int *p = &arg;
 
 	_putchar('0');
 	_putchar('x');

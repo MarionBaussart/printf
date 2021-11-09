@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 		{"b", convert_binary},
 		{"x", convert_hexa},
 		{"X", convert_HEXA},
-		{"+", print_sign},
+/*		{"+", print_sign}, */
 		{"o", convert_octal},
 		{"p", print_address},
 		{NULL, NULL}

@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 		{"b", convert_binary},
 		{"x", convert_hexa},
 		{"X", convert_HEXA},
+		{"+", print_sign},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0, k = 0, length = _strlen(format);
@@ -75,6 +76,7 @@ int _printf(const char *format, ...)
 	_putchar(format[i]);
 	j = 0, i++;
 	}
+	va_end(print);
 /* return the lenght of the string */
 	return (length);
 }

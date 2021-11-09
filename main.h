@@ -27,9 +27,17 @@ void print_integer(va_list print);
 void print_unsigned(va_list print);
 void print_binary(unsigned int i);
 void convert_binary(va_list print);
+<<<<<<< HEAD
 void print_hexa(unsigned int i);
 void convert_hexa(va_list print);
 void print_HEXA(unsigned int i);
 void convert_HEXA(va_list print);
+=======
+void convert_octal(va_list print);
+void print_octal(unsigned int i);
+void print_address(va_list print);
+
+
+>>>>>>> f06bb4b27e17694fbbd3709dd1aaeb2868cf99d0
 
 #endif

@@ -4,11 +4,12 @@
 
 /**
  * print_percent - print a percent
+ * @print: thing to print
  * Return: No return.
  */
 
 void print_percent(va_list print)
 {
 	(void) print;
-    _putchar('%');
+	_putchar('%');
 }

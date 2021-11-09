@@ -14,7 +14,7 @@ void convert_binary(va_list print)
 
 /**
  * print_binary - convert an int into binary number
- * @print: thing to print
+ * @i: thing to print
  * Return: No return.
  */
 

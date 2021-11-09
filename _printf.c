@@ -35,6 +35,7 @@ int _printf(const char *format, ...)
 		{"u", print_unsigned},
 		{"b", convert_binary},
 		{"o", convert_octal},
+		{"p", print_address},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0;

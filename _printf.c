@@ -69,6 +69,8 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == *list_format[j].tf)
 				{
 					list_format[j].nfunc(print);
+					if (format[i + 1] == '%')
+						i++;
 					i += 2;
 				}
 			j++;

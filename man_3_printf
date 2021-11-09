@@ -1,0 +1,30 @@
+.\" Manpage for _printf
+.\" Contact Marion Baussart to correct errors or typos.
+.TH man 8 "08 november 2021" "1.0" "_printf man page"
+.SH NAME
+_printf , print every thing as you want.
+.SH SYNOPSIS
+to use it: _printf(<function>).
+Specifier:
+	%c : Print a character.
+	%s : Print string of character.
+	%% : Print %.
+	%d or %i : Print decimal integer.
+	%b : Convert unsigned integer to binary.
+	%u : Print unsigned decimal integer.
+	%o : Print unsigned octal.
+	%x : Print unsigned hexadecimal integer.
+	%X : Print unsigned hexadecimal integer in uppercase.
+	%p : Print pointer adress.
+
+
+.SH DESCRIPTION
+_printf is a function 
+.SH OPTIONS
+The nuseradd does not take any options. However, you can supply username.
+.SH SEE ALSO
+useradd(8), passwd(5), nuseradd.debian(8) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Charlotte Fournier and Marion Baussart

@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * get_function - get the function according to the format
+ * get_func_format - get the function according to the format
  * @format: string to print
  * Return: function to use
  */

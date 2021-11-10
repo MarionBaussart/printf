@@ -11,7 +11,7 @@ int print_binary(unsigned int i);
 int print_hexa(unsigned int i);
 int print_HEXA(unsigned int i);
 int print_octal(unsigned int i);
-int print_hexas(long unsigned int i);
+int print_hexas(unsigned long int i);
 
 /**
  * struct list_format - Struct list_format

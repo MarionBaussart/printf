@@ -13,7 +13,9 @@ int convert_octal(va_list print)
 	unsigned int o = va_arg(print, unsigned int);
 
 	if (o != 0)
+	{
 		return (print_octal(o));
+	}
 	else
 	{
 		_putchar('0');
@@ -25,7 +27,7 @@ int convert_octal(va_list print)
 
 /**
  * print_octal - convert an int into octal number
- * @i: unsigned int to print
+ * @o: unsigned int to print
  * Return: lenght of thing printed
  */
 

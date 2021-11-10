@@ -5,6 +5,12 @@
 _printf , print every thing as you want.
 .SH SYNOPSIS
 
+	_printf FORMAT [ARGUMENT]...
+
+	_printf OPTION
+
+.SH DESCRIPTION
+
 to use it: _printf(<function>).
 
 Specifier:
@@ -49,13 +55,12 @@ flags:
 
 	- : left-justify within the given field width.
 
-.SH DESCRIPTION
-_printf is a function
-.SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
-.SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8)
+
 .SH BUGS
-No known bugs.
+If are some bugs, call Marion Baussart.
+
+
 .SH AUTHOR
-Charlotte Fournier and Marion Baussart
+Charlotte Fournier: 3645@holbertonschool.com
+
+Marion Baussart: 3328@holbertonschool.com

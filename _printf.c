@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			if (function == NULL)
 			{
 				_putchar('%');
-				_putchar(format[i]);
+				_putchar(format[i - 1]);
 				length += 2;
 			}
 			else

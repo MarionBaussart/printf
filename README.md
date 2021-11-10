@@ -1,4 +1,6 @@
-# Headline H1
+### _printf
+
+# Functions
 
 _printf - Print the string and these possibles arguments
 
@@ -27,3 +29,4 @@ convert_HEXA - Convert into hexadecimal (base 16) in uppercase.
 unprintable_char - Print a string. Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters).
 
 print_hexas - Convert an long unsigned int into hexadecimal number (print address)
+

@@ -13,7 +13,9 @@ int convert_HEXA(va_list print)
 	unsigned int H = va_arg(print, unsigned int);
 
 	if (H != 0)
+	{
 		return (print_HEXA(H));
+	}
 	else
 	{
 		_putchar('0');
@@ -25,7 +27,7 @@ int convert_HEXA(va_list print)
 
 /**
  * print_HEXA - convert an int into hexadecimal number
- * @i: unsigned int to print
+ * @H: unsigned int to print
  * Return: lenght of thing printed
  */
 

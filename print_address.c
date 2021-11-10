@@ -3,7 +3,7 @@
 
 /**
  * print_hexas - convert an long unsigned int into hexadecimal number
- * @i: int to print
+ * @h: int to print
  * Return: lenght of thing printed
  */
 
@@ -41,7 +41,7 @@ int print_hexas(unsigned long int h)
 
 int print_address(va_list print)
 {
-	unsigned long int arg = va_arg(print, int );
+	unsigned long int arg = va_arg(print, int);
 	unsigned long int *p = &arg;
 	int length = 0;
 

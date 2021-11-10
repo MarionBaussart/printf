@@ -21,20 +21,21 @@ int _printf(const char *format, ...)
 	while (format && format[i])
 	{
 /*
- * if we found a '%' : search for the correct
- * format which is just after '%', return the function print to use for the
- * corresponding argument
+ * if we found a '%' : search for the correct format which is just after '%',
+ * return the function print to use for the corresponding argument
  */
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
 			i++;
 			function = get_func_format(format + i);
 			i++;
 			if (function == NULL)
 			{
-				_putchar('%');
-				_putchar(format[i - 1]);
-				length += 2;
+				_putchar('%'), _putchar(format[i - 1]),	length += 2;
 			}
 			else
 				length += function(print);

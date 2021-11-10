@@ -4,29 +4,48 @@
 /**
  * convert_binary - convert into binary
  * @print: thing to print
- * Return: No return.
+ * Return: length.
  */
 
 int convert_binary(va_list print)
 {
-	print_binary(va_arg(print, unsigned int));
+	int length = 0;
+	unsigned int b = va_arg(print, unsigned int);
 
-	return (0);
+	if (b != 0)
+	{
+		return (print_binary(b));
+	}
+	else
+	{
+		_putchar('0');
+		length++;
+	}
+
+	return (length);
 }
 
 /**
  * print_binary - print binary number
- * @i: int to print
- * Return: No return.
+ * @b: unsigned int to print
+ * Return: length.
  */
 
-void print_binary(unsigned int i)
+int print_binary(unsigned int b)
 {
-	if (i / 2 != 0)
+	int length = 0;
+
+	if (b / 2 != 0)
 	{
-		print_binary(i / 2);
-		_putchar(i % 2 + '0');
+		length++;
+		print_binary(b / 2);
+		_putchar(b % 2 + '0');
 	}
 	else
-		_putchar(i % 2 + '0');
+	{
+		length++;
+		_putchar(b % 2 + '0');
+	}
+
+	return (length);
 }

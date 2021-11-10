@@ -3,44 +3,56 @@
 
 /**
  * print_hexas - convert an long unsigned int into hexadecimal number
- * @i: int to print
- * Return: No return.
+ * @h: int to print
+ * Return: lenght of thing printed
  */
 
-void print_hexas(unsigned int i)
+int print_hexas(unsigned long int h)
 {
-	if (i / 16 != 0)
-	{
-		print_hexas(i / 16);
+	int length = 0;
 
-		if ((i % 16) > 9)
-			_putchar((i % 16) - 10 + 'a');
+	if (h / 16 != 0)
+	{
+		length++;
+		print_hexa(h / 16);
+
+		if ((h % 16) > 9)
+			_putchar((h % 16) - 10 + 'a');
 		else
-			_putchar(i % 16 + '0');
+			_putchar(h % 16 + '0');
 	}
 	else
 	{
-		if ((i % 16) > 9)
-			_putchar((i % 16) - 10 + 'a');
+		length++;
+		if ((h % 16) > 9)
+			_putchar((h % 16) - 10 + 'a');
 		else
-			_putchar(i % 16 + '0');
+			_putchar(h % 16 + '0');
 	}
+
+	return (length);
 }
 
 /**
  * print_address - print the address of a pointer
  * @print: thing to print
+ * Return: lenght of thing printed
  */
 
 int print_address(va_list print)
 {
-	unsigned int arg = va_arg(print, int );
-	unsigned int *p = &arg;
+	unsigned long int arg = va_arg(print, int);
+	unsigned long int *p = &arg;
+	int length = 0;
 
-	_putchar('0');
-	_putchar('x');
+	if (p)
+	{
+		_putchar('0');
+		_putchar('x');
+		length += 2;
 
-	print_hexas(*p);
+		print_hexas(*p);
+	}
 
-	return (0);
+	return (length);
 }

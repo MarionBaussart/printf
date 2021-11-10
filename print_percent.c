@@ -1,16 +1,19 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stddef.h>
 
 /**
  * print_percent - print a percent
  * @print: thing to print
- * Return: No return.
+ * Return: length.
  */
 
 int print_percent(va_list print)
 {
+	int length = 0;
 	(void) print;
+
 	_putchar('%');
-	return (0);
+	length++;
+
+	return (length);
 }

@@ -2,10 +2,12 @@
 
 /**
  * print_number - print integer
- * @n: nombre int
+ * @n: int
+ * Return: length of number printed
  */
-void print_number(int n)
+int print_number(int n)
 {
+	int lenght = 0;
 	unsigned int nbc = 0;
 	unsigned int num = n;
 	unsigned int i = 1;
@@ -13,6 +15,7 @@ void print_number(int n)
 	if (n == 0)
 	{
 		_putchar(48);
+		lenght++;
 	}
 	else
 	{
@@ -20,6 +23,7 @@ void print_number(int n)
 		{
 			n = n * (-1);
 			_putchar('-');
+			lenght++;
 			num = n;
 		}
 		while (num > 0)
@@ -35,7 +39,9 @@ void print_number(int n)
 		while (i > 0)
 		{
 			_putchar(((n / i) % 10) + 48);
+			lenght++;
 			i = i / 10;
 		}
 	}
+	return (lenght);
 }

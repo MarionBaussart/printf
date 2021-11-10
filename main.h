@@ -11,7 +11,7 @@ int print_binary(unsigned int i);
 int print_hexa(unsigned int i);
 int print_HEXA(unsigned int i);
 int print_octal(unsigned int i);
-int print_hexas(unsigned int i);
+int print_hexas(long unsigned int i);
 
 /**
  * struct list_format - Struct list_format
@@ -25,6 +25,7 @@ typedef struct list_format
 	int (*nfunc)(va_list);
 } format_t;
 
+int (*get_func_format(const char *format))(va_list);
 int print_char(va_list print);
 int print_string(va_list print);
 int print_percent(va_list print);

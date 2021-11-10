@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, length = 0;
-	int (*function)(va_list print);
+	int (*function)(va_list);
 /* pointer of the list named print */
 	va_list print;
 
@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			function = get_func_format(format + i);
+			i++;
 			if (function == NULL)
 			{
 				_putchar('%');
@@ -35,13 +36,15 @@ int _printf(const char *format, ...)
 				length += 2;
 			}
 			else
-				length += get_func_format(print);
+				length += function(print);
 		}
 		else
+		{
 /* print the string */
 			_putchar(format[i]);
 			length++;
 			i++;
+		}
 	}
 	va_end(print);
 /* return the lenght of the string */

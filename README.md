@@ -6,7 +6,7 @@
 
 Function that print the string and these possibles arguments
 
-/* Identifier */
+> Identifier
 
 ### _putchar 
 

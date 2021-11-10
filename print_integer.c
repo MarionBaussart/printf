@@ -4,14 +4,12 @@
 /**
  * print_integer - print an int
  * @print: thing to print
- * Return: No return.
+ * Return: lenght of thing printed
  */
 
 int print_integer(va_list print)
 {
 	int i = va_arg(print, int);
 
-	print_number(i);
-
-	return (0);
+	return (print_number(i));
 }

@@ -3,57 +3,21 @@
 #include <stddef.h>
 
 /**
- * _strlen - returns the length of a string
- * @string: string of character
- * Return: i, number of character
- */
-
-int _strlen(const char *string)
-{
-	int i = 0;
-
-	while (*(string + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
  * _printf - print the string and these possibles arguments
  * @format: string to print
- * Return: number of character
+ * Return: length of the string printed
  */
 int _printf(const char *format, ...)
 {
-	format_t list_format[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{"d", print_integer},
-		{"i", print_integer},
-		{"u", print_unsigned},
-		{"b", convert_binary},
-		{"x", convert_hexa},
-		{"X", convert_HEXA},
-/*		{"+", print_sign}, */
-		{"o", convert_octal},
-		{"p", print_address},
-		{NULL, NULL}
-	};
-	int i = 0, j = 0, k = 0, length = _strlen(format);
+	int i = 0, length = 0;
+	int (*function)(va_list);
 /* pointer of the list named print */
 	va_list print;
 
-/* length : if %%, count only one */
-	while (format && format[k])
-	{
-		if (format[k] == '%' && format[k + 1] == '%')
-			length--, k++;
-		k++;
-	}
-	va_start(print, format); /* parcourir the list which the last argument is format */
-	while (format && format[i]) /* write the string but if it is '%' print argument*/
+/* parcourir the list which the last argument is format */
+	va_start(print, format);
+/* write the string but if it is '%' print argument*/
+	while (format && format[i])
 	{
 /*
  * if we found a '%' : search for the correct
@@ -62,19 +26,27 @@ int _printf(const char *format, ...)
  */
 		if (format[i] == '%')
 		{
-			while (list_format[j].tf != NULL)
+			i++;
+			function = get_func_format(format + i);
+			i++;
+			if (function == NULL)
 			{
-				if (format[i + 1] == *list_format[j].tf)
-				{
-					list_format[j].nfunc(print);
-					i += 2;
-				}
-			j++;
+				_putchar('%');
+				_putchar(format[i]);
+				length += 2;
 			}
+			else
+				length += function(print);
 		}
-	_putchar(format[i]); /* print the string */
-	j = 0, i++;
+		else
+		{
+/* print the string */
+			_putchar(format[i]);
+			length++;
+			i++;
+		}
 	}
 	va_end(print);
-	return (length); /* return the lenght of the string */
+/* return the lenght of the string */
+	return (length);
 }

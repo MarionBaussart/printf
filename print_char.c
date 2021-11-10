@@ -5,14 +5,19 @@
 /**
  * print_char - print a char
  * @print: thing to print
- * Return: No return.
+ * Return: lenght.
  */
 
 int print_char(va_list print)
 {
 	char c = va_arg(print, int);
+	int length = 0;
 
-	_putchar(c);
+	if (c)
+	{
+		_putchar(c);
+		length++;
+	}
 
-	return (0);
+	return (length);
 }

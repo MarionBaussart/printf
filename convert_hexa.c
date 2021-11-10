@@ -4,38 +4,53 @@
 /**
  * convert_hexa - convert into hexadecimal
  * @print: thing to print
- * Return: No return.
+ * Return: lenght of thing printed
  */
 
 int convert_hexa(va_list print)
 {
-	print_hexa(va_arg(print, unsigned int));
+	int length = 0;
+	unsigned int h = va_arg(print, unsigned int);
 
-	return (0);
+	if (h != 0)
+		return (print_hexa(h));
+	else
+	{
+		_putchar('0');
+		length++;
+	}
+
+	return (length);
 }
 
 /**
  * print_hexa - convert an int into hexadecimal number
- * @i: int to print
- * Return: No return.
+ * @i: unsigned int to print
+ * Return: lenght of thing printed
  */
 
-void print_hexa(unsigned int i)
+int print_hexa(unsigned int h)
 {
-	if (i / 16 != 0)
-	{
-		print_hexa(i / 16);
+	int length = 0;
 
-		if ((i % 16) > 9)
-			_putchar((i % 16) - 10 + 'a');
+	if (h / 16 != 0)
+	{
+		length++;
+		print_hexa(h / 16);
+
+		if ((h % 16) > 9)
+			_putchar((h % 16) - 10 + 'a');
 		else
-			_putchar(i % 16 + '0');
+			_putchar(h % 16 + '0');
 	}
 	else
 	{
-		if ((i % 16) > 9)
-			_putchar((i % 16) - 10 + 'a');
+		length++;
+		if ((h % 16) > 9)
+			_putchar((h % 16) - 10 + 'a');
 		else
-			_putchar(i % 16 + '0');
+			_putchar(h % 16 + '0');
 	}
+
+	return (length);
 }

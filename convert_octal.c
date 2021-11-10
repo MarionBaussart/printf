@@ -4,31 +4,46 @@
 /**
  * convert_octal - convert into octal
  * @print: thing to print
- * Return: No return.
+ * Return: lenght of thing printed
  */
 
 int convert_octal(va_list print)
 {
-	print_octal(va_arg(print, unsigned int));
+	int length = 0;
+	unsigned int o = va_arg(print, unsigned int);
 
-	return (0);
+	if (o != 0)
+		return (print_octal(o));
+	else
+	{
+		_putchar('0');
+		length++;
+	}
+
+	return (length);
 }
 
 /**
  * print_octal - convert an int into octal number
- * @i: thing to print
- * Return: No return.
+ * @i: unsigned int to print
+ * Return: lenght of thing printed
  */
 
-void print_octal(unsigned int i)
+int print_octal(unsigned int o)
 {
-	if (i / 8 != 0)
+	int length = 0;
+
+	if (o / 8 != 0)
 	{
-		print_octal(i / 8);
-		_putchar(i % 8 + '0');
+		length++;
+		print_octal(o / 8);
+		_putchar(o % 8 + '0');
 	}
 	else
 	{
-		_putchar(i % 8 + '0');
+		length++;
+		_putchar(o % 8 + '0');
 	}
+
+	return (length);
 }

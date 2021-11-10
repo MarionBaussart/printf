@@ -7,13 +7,14 @@
  * followed by the ASCII code value in hexadecimal
  * (upper case - always 2 characters)
  * @print: thing to print
- * Return: No return.
+ * Return: length of the string printed
  */
 
 int unprintable_char(va_list print)
 {
 	char *s = va_arg(print, char *);
 	unsigned int i = 0;
+	int length = 0;
 
 	while (s[i])
 	{
@@ -21,17 +22,26 @@ int unprintable_char(va_list print)
 		{
 			_putchar('\\');
 			_putchar('x');
+			length += 2;
 			if (s[i] < 16)
 			{
 				_putchar('0');
+				length++;
 				print_HEXA(s[i]);
+				length += print_HEXA(s[i]);
 			}
 			else
+			{
 				print_HEXA(s[i]);
+				length += print_HEXA(s[i]);
+			}
 		}
 		else
+		{
 			_putchar(s[i]);
+			length++;
+		}
 		i++;
 	}
-	return (0);
+	return (length);
 }

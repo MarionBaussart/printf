@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * print_unsigned_number - print integer
- * @n: nombre int
+ * print_unsigned_number - print unsigned integer
+ * @n: unsigned int
+ * Return: length of the number printed
  */
-void print_unsigned_number(unsigned int n)
+int print_unsigned_number(unsigned int n)
 {
+	int lenght = 0;
 	unsigned int nbc = 0;
 	unsigned int num = n;
 	unsigned int i = 1;
@@ -13,6 +15,7 @@ void print_unsigned_number(unsigned int n)
 	if (n == 0)
 	{
 		_putchar(48);
+		lenght++;
 	}
 	else
 	{
@@ -29,7 +32,9 @@ void print_unsigned_number(unsigned int n)
 		while (i > 0)
 		{
 			_putchar(((n / i) % 10) + 48);
+			lenght++;
 			i = i / 10;
 		}
 	}
+	return (lenght);
 }

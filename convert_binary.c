@@ -15,7 +15,7 @@ int convert_binary(va_list print)
 
 	if (b > 0)
 	{
-		print_binary(b);
+		return (print_binary(b));
 	}
 	else if (b == 0)
 	{

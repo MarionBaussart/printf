@@ -7,9 +7,11 @@
  * Return: No return.
  */
 
-void print_integer(va_list print)
+int print_integer(va_list print)
 {
 	int i = va_arg(print, int);
 
 	print_number(i);
+
+	return (0);
 }

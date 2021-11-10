@@ -7,9 +7,11 @@
  * Return: No return.
  */
 
-void convert_binary(va_list print)
+int convert_binary(va_list print)
 {
 	print_binary(va_arg(print, unsigned int));
+
+	return (0);
 }
 
 /**

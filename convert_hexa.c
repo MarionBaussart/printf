@@ -7,9 +7,11 @@
  * Return: No return.
  */
 
-void convert_hexa(va_list print)
+int convert_hexa(va_list print)
 {
 	print_hexa(va_arg(print, unsigned int));
+
+	return (0);
 }
 
 /**

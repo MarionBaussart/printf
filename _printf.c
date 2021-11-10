@@ -52,10 +52,8 @@ int _printf(const char *format, ...)
 			length--, k++;
 		k++;
 	}
-/* parcourir the list which the last argument is format */
-	va_start(print, format);
-/* write the string but if it is '%' print argument*/
-	while (format && format[i])
+	va_start(print, format); /* parcourir the list which the last argument is format */
+	while (format && format[i]) /* write the string but if it is '%' print argument*/
 	{
 /*
  * if we found a '%' : search for the correct
@@ -74,11 +72,9 @@ int _printf(const char *format, ...)
 			j++;
 			}
 		}
-	/* print the string */
-	_putchar(format[i]);
+	_putchar(format[i]); /* print the string */
 	j = 0, i++;
 	}
 	va_end(print);
-/* return the lenght of the string */
-	return (length);
+	return (length); /* return the lenght of the string */
 }

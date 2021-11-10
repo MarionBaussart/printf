@@ -8,9 +8,11 @@
  * Return: No return.
  */
 
-void print_char(va_list print)
+int print_char(va_list print)
 {
 	char c = va_arg(print, int);
 
 	_putchar(c);
+
+	return (0);
 }

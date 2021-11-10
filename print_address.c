@@ -32,13 +32,15 @@ void print_hexas(unsigned int i)
  * @print: thing to print
  */
 
-void print_address(va_list print)
+int print_address(va_list print)
 {
-	unsigned int arg = va_arg(print, int);
+	unsigned int arg = va_arg(print, int );
 	unsigned int *p = &arg;
 
 	_putchar('0');
 	_putchar('x');
 
 	print_hexas(*p);
+
+	return (0);
 }

@@ -8,7 +8,7 @@
  * Return: No return.
  */
 
-void print_string(va_list print)
+int print_string(va_list print)
 {
 	char *s = va_arg(print, char *);
 	int i = 0;
@@ -18,4 +18,5 @@ void print_string(va_list print)
 		_putchar(s[i]);
 		i++;
 	}
+	return (0);
 }

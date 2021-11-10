@@ -8,8 +8,9 @@
  * Return: No return.
  */
 
-void print_percent(va_list print)
+int print_percent(va_list print)
 {
 	(void) print;
 	_putchar('%');
+	return (0);
 }

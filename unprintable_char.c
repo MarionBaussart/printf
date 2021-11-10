@@ -10,7 +10,7 @@
  * Return: No return.
  */
 
-void unprintable_char(va_list print)
+int unprintable_char(va_list print)
 {
 	char *s = va_arg(print, char *);
 	unsigned int i = 0;
@@ -33,4 +33,5 @@ void unprintable_char(va_list print)
 			_putchar(s[i]);
 		i++;
 	}
+	return (0);
 }

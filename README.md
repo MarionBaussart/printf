@@ -17,6 +17,7 @@ Function that use for all prototypes for functions.
 ### print_char 
 
 Function that print a char.
+
 `Specifier : %c`
 
 ### print_string 

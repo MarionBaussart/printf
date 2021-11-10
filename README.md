@@ -1,6 +1,6 @@
-### _printf
+# _printf
 
-# Functions
+## Functions
 
 _printf - Print the string and these possibles arguments
 

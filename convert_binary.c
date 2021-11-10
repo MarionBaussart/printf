@@ -13,7 +13,9 @@ int convert_binary(va_list print)
 	unsigned int b = va_arg(print, unsigned int);
 
 	if (b != 0)
+	{
 		return (print_binary(b));
+	}
 	else
 	{
 		_putchar('0');
@@ -25,7 +27,7 @@ int convert_binary(va_list print)
 
 /**
  * print_binary - print binary number
- * @i: unsigned int to print
+ * @b: unsigned int to print
  * Return: length.
  */
 

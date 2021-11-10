@@ -7,9 +7,11 @@
  * Return: No return.
  */
 
-void convert_octal(va_list print)
+int convert_octal(va_list print)
 {
 	print_octal(va_arg(print, unsigned int));
+
+	return (0);
 }
 
 /**

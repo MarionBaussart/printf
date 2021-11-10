@@ -17,23 +17,25 @@ void print_unsigned_number(unsigned int n);
 typedef struct list_format
 {
 	char *tf;
-	void (*nfunc)(va_list);
+	int (*nfunc)(va_list);
 } format_t;
 
-void print_char(va_list print);
-void print_string(va_list print);
-void print_percent(va_list print);
-void print_integer(va_list print);
-void print_unsigned(va_list print);
+int print_char(va_list print);
+int print_string(va_list print);
+int print_percent(va_list print);
+int print_integer(va_list print);
+int print_unsigned(va_list print);
 void print_binary(unsigned int i);
-void convert_binary(va_list print);
+int convert_binary(va_list print);
 void print_hexa(unsigned int i);
-void convert_hexa(va_list print);
+int convert_hexa(va_list print);
 void print_HEXA(unsigned int i);
-void convert_HEXA(va_list print);
-void convert_octal(va_list print);
+int convert_HEXA(va_list print);
+int convert_octal(va_list print);
 void print_octal(unsigned int i);
-void print_address(va_list print);
-void print_sign(va_list print);
+int print_address(va_list print);
+void print_hexas(unsigned int i);
+int convert_hexas(va_list print);
+int unprintable_char(va_list print);
 
 #endif

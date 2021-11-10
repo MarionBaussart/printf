@@ -7,9 +7,11 @@
  * Return: No return.
  */
 
-void print_unsigned(va_list print)
+int print_unsigned(va_list print)
 {
 	long int i = va_arg(print, long int);
 
 	print_unsigned_number(i);
+
+	return (0);
 }

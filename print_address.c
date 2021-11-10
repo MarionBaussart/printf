@@ -7,7 +7,7 @@
  * Return: lenght of thing printed
  */
 
-int print_hexas(long unsigned int h)
+int print_hexas(unsigned long int h)
 {
 	int length = 0;
 
@@ -41,8 +41,8 @@ int print_hexas(long unsigned int h)
 
 int print_address(va_list print)
 {
-	long unsigned int arg = va_arg(print, int );
-	long unsigned int *p = &arg;
+	unsigned long int arg = va_arg(print, int );
+	unsigned long int *p = &arg;
 	int length = 0;
 
 	if (p)

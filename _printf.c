@@ -11,12 +11,13 @@ int _printf(const char *format, ...)
 {
 	int i = 0, length = 0;
 	int (*function)(va_list);
-/* pointer of the list named print */
 	va_list print;
 
-/* parcourir the list which the last argument is format */
 	va_start(print, format);
-/* write the string but if it is '%' print argument*/
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
 	while (format && format[i])
 	{
 /*
@@ -40,13 +41,11 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-/* print the string */
 			_putchar(format[i]);
 			length++;
 			i++;
 		}
 	}
 	va_end(print);
-/* return the lenght of the string */
 	return (length);
 }

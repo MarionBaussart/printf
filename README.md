@@ -6,6 +6,8 @@
 
 Function that print the string and these possibles arguments
 
+/* Identifier */
+
 ### _putchar 
 
 Function that writes the character c to stdout

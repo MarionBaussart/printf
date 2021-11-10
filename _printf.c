@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (function == NULL)
 			{
-				_putchar('%'), _putchar(format[i - 1]),    length += 2;
+				_putchar('%'), _putchar(format[i - 1]),	length += 2;
 			}
 			else
 				length += function(print);

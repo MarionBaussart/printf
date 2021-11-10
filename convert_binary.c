@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * convert_binary - convert into binary
@@ -12,11 +13,11 @@ int convert_binary(va_list print)
 	int length = 0;
 	unsigned int b = va_arg(print, unsigned int);
 
-	if (b != 0)
+	if (b > 0)
 	{
 		return (print_binary(b));
 	}
-	else
+	else if (b == 0)
 	{
 		_putchar('0');
 		length++;

@@ -19,10 +19,6 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-/*
- * if we found a '%' : search for the correct format which is just after '%',
- * return the function print to use for the corresponding argument
- */
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')

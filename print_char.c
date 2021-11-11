@@ -13,11 +13,11 @@ int print_char(va_list print)
 	char c = va_arg(print, int);
 	int length = 0;
 
-	if (c)
+	if (c != '\0')
 	{
 		_putchar(c);
 		length++;
 	}
 
-	return (length);
+	return (1);
 }

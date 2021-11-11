@@ -2,24 +2,23 @@
 #include <stdarg.h>
 
 /**
- * print_hexas - convert an long unsigned int into hexadecimal number
- * @h: int to print
+ * print_hexa_long - convert an int into hexadecimal number
+ * @h: unsigned int to print
  * Return: lenght of thing printed
  */
 
-int print_hexas(unsigned long int h)
+int print_hexa_long(unsigned long int h)
 {
 	int length = 0;
 
 	if (h / 16 != 0)
 	{
-		length++;
-		print_hexa(h / 16);
-
+		length = print_hexa(h / 16);
 		if ((h % 16) > 9)
 			_putchar((h % 16) - 10 + 'a');
 		else
 			_putchar(h % 16 + '0');
+		length++;
 	}
 	else
 	{
@@ -51,7 +50,7 @@ int print_address(va_list print)
 		_putchar('x');
 		length += 2;
 
-		print_hexas(*p);
+		print_hexa(*p);
 	}
 
 	return (length);

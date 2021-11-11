@@ -22,6 +22,9 @@ int (*get_func_format(const char *format))(va_list)
 		{"X", convert_HEXA},
 		{"o", convert_octal},
 		{"p", print_address},
+		{"S", unprintable_char},
+		{"r", print_revstring},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 

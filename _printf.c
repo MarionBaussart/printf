@@ -15,10 +15,9 @@ int _printf(const char *format, ...)
 
 	va_start(print, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-	{
 		return (-1);
-	}
-	while (format && format[i])
+
+	while (format[i])
 	{
 /*
  * if we found a '%' : search for the correct format which is just after '%',
@@ -31,11 +30,14 @@ int _printf(const char *format, ...)
 				return (-1);
 			}
 			i++;
-			function = get_func_format(format + i);
-			i++;
+			if (format[i] != '\0')
+			{
+				function = get_func_format(format + i);
+				i++;
+			}
 			if (function == NULL)
 			{
-				_putchar('%'), _putchar(format[i - 1]),    length += 2;
+				_putchar('%'), _putchar(format[i - 1]),	length += 2;
 			}
 			else
 				length += function(print);

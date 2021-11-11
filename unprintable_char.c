@@ -28,12 +28,12 @@ int unprintable_char(va_list print)
 				_putchar('0');
 				length++;
 				print_HEXA(s[i]);
-				length += print_HEXA(s[i]);
+				length ++;
 			}
 			else
 			{
 				print_HEXA(s[i]);
-				length += print_HEXA(s[i]);
+				length += 2;
 			}
 		}
 		else

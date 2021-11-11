@@ -9,7 +9,6 @@
 
 int convert_hexa(va_list print)
 {
-	int length = 0;
 	unsigned int h = va_arg(print, unsigned int);
 
 	if (h != 0)
@@ -19,10 +18,9 @@ int convert_hexa(va_list print)
 	else
 	{
 		_putchar('0');
-		length++;
 	}
 
-	return (length);
+	return (1);
 }
 
 /**
@@ -37,13 +35,12 @@ int print_hexa(unsigned int h)
 
 	if (h / 16 != 0)
 	{
-		length++;
-		print_hexa(h / 16);
-
+		length = print_hexa(h / 16);
 		if ((h % 16) > 9)
 			_putchar((h % 16) - 10 + 'a');
 		else
 			_putchar(h % 16 + '0');
+		length++;
 	}
 	else
 	{

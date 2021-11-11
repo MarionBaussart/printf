@@ -9,7 +9,6 @@
 
 int convert_octal(va_list print)
 {
-	int length = 0;
 	unsigned int o = va_arg(print, unsigned int);
 
 	if (o != 0)
@@ -19,10 +18,9 @@ int convert_octal(va_list print)
 	else
 	{
 		_putchar('0');
-		length++;
 	}
 
-	return (length);
+	return (1);
 }
 
 /**
@@ -37,9 +35,9 @@ int print_octal(unsigned int o)
 
 	if (o / 8 != 0)
 	{
-		length++;
-		print_octal(o / 8);
+		length = print_octal(o / 8);
 		_putchar(o % 8 + '0');
+		length++;
 	}
 	else
 	{

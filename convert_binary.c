@@ -12,10 +12,17 @@ int convert_binary(va_list print)
 {
 	int length = 0;
 	unsigned int b = va_arg(print, unsigned int);
+	unsigned int tb = b;
 
-	if (b > 0)
+	while (tb / 2)
 	{
-		return (print_binary(b));
+		length++;
+		tb = tb / 2;
+	}
+	if (b != 0)
+	{
+		length += print_binary(b);
+
 	}
 	else if (b == 0)
 	{
@@ -34,19 +41,15 @@ int convert_binary(va_list print)
 
 int print_binary(unsigned int b)
 {
-	int length = 0;
-
 	if (b / 2 != 0)
 	{
-		length++;
 		print_binary(b / 2);
 		_putchar(b % 2 + '0');
 	}
 	else
 	{
-		length++;
 		_putchar(b % 2 + '0');
 	}
 
-	return (length);
+	return (1);
 }

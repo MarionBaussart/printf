@@ -23,6 +23,7 @@ int (*get_func_format(const char *format))(va_list)
 		{"o", convert_octal},
 		{"p", print_address},
 		{"S", unprintable_char},
+		{"r", print_revstring},
 		{NULL, NULL}
 	};
 

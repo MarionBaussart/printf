@@ -5,12 +5,12 @@
  * @n: unsigned int
  * Return: length of the number printed
  */
-int print_unsigned_number(unsigned int n)
+int print_unsigned_number(unsigned long int n)
 {
 	int lenght = 0;
-	unsigned int nbc = 0;
-	unsigned int num = n;
-	unsigned int i = 1;
+	unsigned long int nbc = 0;
+	unsigned long int num = n;
+	unsigned long int i = 1;
 
 	if (n == 0)
 	{

@@ -43,22 +43,19 @@ Specifier:
 
 	%R : Print the rot13's string.
 
-flags:
+Examples:
 
-	+ : Preceed the result with a plus or minus (+ or -).
+	_printf("Betty %s", Holberton)
 
-	(space) : If no sign is going to be written, a blank space is inserted before the value.
+		Output: Betty Holbeton
 
-	# : Used with "o", "x" or "X" specifiers the value is preceeded with 0, 0x or 0X respectively for value differents than zero.
+	_printf("5 * 5 is equal to %d", 25)
 
-	0 : Left-pads the numbers with zeros (0) instead of spaces.
-
-	- : left-justify within the given field width.
+		Output: 5 * 5 is equal to 25
 
 
 .SH BUGS
 If are some bugs, call Marion Baussart.
-
 
 .SH AUTHOR
 Charlotte Fournier: 3645@holbertonschool.com

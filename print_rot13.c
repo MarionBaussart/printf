@@ -16,19 +16,27 @@ int print_rot13(va_list print)
 	char yrggre[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	if (s == NULL)
-		s = "(null)";
+		s = "(ahyy)";
 
 	while (s[i])
 	{
-		while (letter[j])
+		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
 		{
-			if (s[i] == letter[j])
+			while (letter[j])
 			{
-				_putchar(yrggre[j]);
-				length++;
-				break;
+				if (s[i] == letter[j])
+				{
+					_putchar(yrggre[j]);
+					length++;
+					break;
+				}
+				j++;
 			}
-			j++;
+		}
+		else
+		{
+			_putchar(s[i]);
+			length++;
 		}
 		j = 0;
 		i++;

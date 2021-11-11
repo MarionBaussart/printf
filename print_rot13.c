@@ -16,10 +16,7 @@ int print_rot13(va_list print)
 	char yrggre[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	if (s == NULL)
-	{
 		s = "(null)";
-		return (length);
-	}
 
 	while (s[i])
 	{

@@ -6,7 +6,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_number(int n);
-int print_unsigned_number(unsigned int n);
+int print_unsigned_number(unsigned long int n);
 int print_binary(unsigned int i);
 int print_hexa(unsigned int i);
 int print_HEXA(unsigned int i);
@@ -38,5 +38,6 @@ int convert_octal(va_list print);
 int print_address(va_list print);
 int convert_hexas(va_list print);
 int unprintable_char(va_list print);
+int print_revstring(va_list print);
 
 #endif

@@ -9,7 +9,7 @@
 
 int print_unsigned(va_list print)
 {
-	long int i = va_arg(print, long int);
+	unsigned long int i = va_arg(print, unsigned int);
 
 	return (print_unsigned_number(i));
 }

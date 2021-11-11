@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-
 #include "main.h"
 
 /**
@@ -54,7 +53,6 @@ int print_number_sign(int n)
 	return (lenght);
 }
 
-
 /**
  * print_integer_flagplus - print an int with the sign
  * @print: thing to print
@@ -64,6 +62,5 @@ int print_number_sign(int n)
 int print_integer_flagplus(va_list print)
 {
 	int i = va_arg(print, int);
-
 	return (print_number_sign(i));
 }

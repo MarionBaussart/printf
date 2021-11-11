@@ -80,3 +80,15 @@ Function that convert an long unsigned int into hexadecimal number (print addres
 
 `Specifier : %p`
 
+### print_revstring
+
+print the reversed string
+
+`Specifier : %r`
+
+### print_rot13
+
+encodes a string using rot13
+
+`Specifier : %R`
+

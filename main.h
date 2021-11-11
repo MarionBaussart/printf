@@ -39,5 +39,6 @@ int print_address(va_list print);
 int convert_hexas(va_list print);
 int unprintable_char(va_list print);
 int print_revstring(va_list print);
+int print_rot13(va_list print);
 
 #endif

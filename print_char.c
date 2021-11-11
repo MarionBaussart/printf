@@ -18,6 +18,15 @@ int print_char(va_list print)
 		_putchar(c);
 		length++;
 	}
+	else if (c == '\0')
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+	}
 
 	return (1);
 }

@@ -6,7 +6,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_number(int n);
-int print_unsigned_number(unsigned long int n);
+int print_unsigned_number(unsigned int n);
 int print_binary(unsigned int i);
 int print_hexa(unsigned int i);
 int print_HEXA(unsigned int i);

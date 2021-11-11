@@ -15,10 +15,7 @@ int print_number_sign(int n)
 	unsigned int i = 1;
 
 	if (n == 0)
-	{
-		_putchar(48);
-		lenght++;
-	}
+		_putchar(48), lenght++;
 	else
 	{
 		if (n < 0)
@@ -28,11 +25,11 @@ int print_number_sign(int n)
 			lenght++;
 			num = n;
 		}
-        if (n > 0)
-        {
-            _putchar('+');
+		if (n > 0)
+		{
+			_putchar('+');
 			lenght++;
-        }
+		}
 		while (num > 0)
 		{
 			num = num / 10;
@@ -40,8 +37,7 @@ int print_number_sign(int n)
 		}
 		while (nbc > 1)
 		{
-			i = i * 10;
-			nbc--;
+			i = i * 10, nbc--;
 		}
 		while (i > 0)
 		{
@@ -62,5 +58,6 @@ int print_number_sign(int n)
 int print_integer_flagplus(va_list print)
 {
 	int i = va_arg(print, int);
+
 	return (print_number_sign(i));
 }

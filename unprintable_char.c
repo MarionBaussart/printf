@@ -28,7 +28,7 @@ int unprintable_char(va_list print)
 				_putchar('0');
 				length++;
 				print_HEXA(s[i]);
-				length ++;
+				length++;
 			}
 			else
 			{

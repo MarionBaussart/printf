@@ -25,6 +25,8 @@ int (*get_func_format(const char *format))(va_list)
 		{"S", unprintable_char},
 		{"r", print_revstring},
 		{"R", print_rot13},
+		{"+", print_integer_flagplus},
+
 		{NULL, NULL}
 	};
 

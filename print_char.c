@@ -19,5 +19,5 @@ int print_char(va_list print)
 		length++;
 	}
 
-	return (length);
+	return (1);
 }

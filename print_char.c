@@ -11,13 +11,8 @@
 int print_char(va_list print)
 {
 	char c = va_arg(print, int);
-	int length = 0;
 
-	if (c)
-	{
-		_putchar(c);
-		length++;
-	}
+	_putchar(c);
 
 	return (1);
 }

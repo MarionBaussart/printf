@@ -11,7 +11,8 @@ int print_binary(unsigned int i);
 int print_hexa(unsigned int i);
 int print_HEXA(unsigned int i);
 int print_octal(unsigned int i);
-int print_hexas(unsigned long int i);
+int print_hexa_long(unsigned long int h);
+int print_number_sign(int n);
 
 /**
  * struct list_format - Struct list_format
@@ -40,5 +41,6 @@ int convert_hexas(va_list print);
 int unprintable_char(va_list print);
 int print_revstring(va_list print);
 int print_rot13(va_list print);
+int print_integer_flagplus(va_list print);
 
 #endif
